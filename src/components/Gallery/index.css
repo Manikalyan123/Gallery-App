@@ -1,0 +1,17 @@
+/* Write your code here. */
+.Cont {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 80px;
+}
+.big-image {
+  height: 65vh;
+  width: 80vw;
+}
+.unorderlist {
+  display: flex;
+  flex-direction: row;
+  padding-left: 0px;
+}
