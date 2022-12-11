@@ -9,3 +9,11 @@
   margin-right: 10px;
   margin-left: 0px;
 }
+#noOpaque {
+  height: 200px;
+  opacity: none;
+}
+button {
+  border: none;
+  padding: 0px;
+}

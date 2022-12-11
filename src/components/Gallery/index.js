@@ -78,10 +78,9 @@ class Gallery extends Component {
   state = {imageUrl: imagesList[0].imageUrl, Alt: imagesList[0].imageAltText}
 
   onViewImage = id => {
-    const imageDetails = imagesList.filter(every => every.id === id)
     this.setState({
-      imageUrl: imageDetails.imageUrl,
-      Alt: imageDetails.imageAltText,
+      imageUrl: imagesList[id].imageUrl,
+      Alt: imagesList[id].imageAltText,
     })
   }
 
@@ -94,7 +93,12 @@ class Gallery extends Component {
         <p>Nature Photography by Rahul</p>
         <ul className="unorderlist">
           {imagesList.map(each => (
-            <ThumbnailItem imagesList={each} key={each.id} />
+            <ThumbnailItem
+              imagesList={each}
+              key={each.id}
+              onViewImage={this.onViewImage}
+              isTrue={each.imageUrl === imageUrl}
+            />
           ))}
         </ul>
       </div>
